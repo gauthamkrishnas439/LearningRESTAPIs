@@ -1,24 +1,22 @@
 package com.codingshuttle.youtube.LearningRESTAPIs.service;
 
 import com.codingshuttle.youtube.LearningRESTAPIs.dto.AddStudentRequestDto;
-import com.codingshuttle.youtube.LearningRESTAPIs.dto.StudentDto;
-import com.codingshuttle.youtube.LearningRESTAPIs.entity.Student;
+import com.codingshuttle.youtube.LearningRESTAPIs.dto.StudentResponseDto;
 
 import java.util.List;
 import java.util.Map;
 
 public interface StudentService {
 
-    List<StudentDto> getAllStudents();
+    List<StudentResponseDto> getAllStudents();
 
-    StudentDto getStudentById(Long id);
+    StudentResponseDto getStudentById(Long id);
 
-    StudentDto createNewStudent(AddStudentRequestDto addStudentRequestDto);
+    StudentResponseDto createNewStudent(AddStudentRequestDto addStudentRequestDto);
 
     void deleteStudentById(Long id);
 
-    StudentDto updateStudent(Long id, AddStudentRequestDto addStudentRequestDto);
+    StudentResponseDto updateStudent(Long id, AddStudentRequestDto addStudentRequestDto);
 
-
-    StudentDto updatePartialStudent(Long id, Map<String, Object> updates);
+    StudentResponseDto updatePartialStudent(Long id, Map<String, Object> updates);
 }
